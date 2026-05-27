@@ -7,7 +7,8 @@
 <title>GATSBY PARTY</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -18,91 +19,182 @@
 }
 
 body{
+
     min-height:100vh;
+
     display:flex;
     justify-content:center;
     align-items:center;
 
-    background:
-    linear-gradient(rgba(255,215,120,0.75), rgba(212,175,55,0.85)),
-    url("background.jpg");
-
-    background-size:cover;
-    background-position:center;
-
-    color:#111;
+    overflow:hidden;
 
     font-family:'Cinzel', serif;
 
+    background:
+    radial-gradient(circle at top, #ffe8a3 0%, #d4af37 35%, #8b6508 100%);
+
+    position:relative;
+
     padding:20px;
 }
-.card{
+
+/* Золотые звездочки */
+
+.stars{
+    position:absolute;
     width:100%;
-    max-width:700px;
-
-    border:3px solid #111;
-
-    padding:50px 35px;
-
-    background:rgba(255,245,210,0.88);
-
-    backdrop-filter:blur(8px);
-
-    border-radius:20px;
-
-    box-shadow:
-    0 0 35px rgba(0,0,0,0.25);
-
-    text-align:center;
+    height:100%;
+    overflow:hidden;
+    top:0;
+    left:0;
+    z-index:0;
 }
 
+.star{
+    position:absolute;
+    color:#fff4c7;
+    font-size:18px;
+    animation:blink 3s infinite alternate;
+}
+
+@keyframes blink{
+    from{
+        opacity:0.2;
+        transform:scale(1);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.3);
+    }
+}
+
+/* Карточка */
+
+.card{
+
+    position:relative;
+    z-index:2;
+
+    width:100%;
+    max-width:760px;
+
+    background:rgba(255,248,220,0.92);
+
+    border:4px solid #111;
+
+    border-radius:30px;
+
+    padding:55px 35px;
+
+    text-align:center;
+
+    box-shadow:
+    0 0 50px rgba(0,0,0,0.25);
+
+    backdrop-filter:blur(8px);
+}
+
+/* Декор */
+
+.decor{
+    font-size:34px;
+    margin-bottom:18px;
+}
+
+/* Заголовок */
+
 .title{
-    font-size:52px;
-    letter-spacing:5px;
-    margin-bottom:10px;
+
+    font-family:'Great Vibes', cursive;
+
+    font-size:78px;
+
+    color:#111;
+
+    margin-bottom:15px;
+
+    text-shadow:
+    0 0 10px rgba(212,175,55,0.5);
 }
 
 .subtitle{
-    font-size:20px;
-    margin-bottom:40px;
-    color:#222;
+
+    letter-spacing:4px;
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+    color:#333;
+}
+
+.line{
+
+    width:160px;
+    height:2px;
+
+    background:#111;
+
+    margin:28px auto;
 }
 
 .section{
-    margin-bottom:28px;
-    line-height:1.8;
-    font-size:22px;
+
+    font-size:24px;
+
+    line-height:1.9;
+
+    color:#111;
+
+    margin-bottom:22px;
 }
 
 .gold{
+
     color:#8b6508;
+
     font-weight:700;
-}
-.line{
-    width:120px;
-    height:2px;
-    background:#d4af37;
-    margin:30px auto;
 }
 
 .footer{
+
     margin-top:35px;
-    font-size:18px;
-    color:#222;
-    line-height:1.7;
+
+    line-height:1.9;
+
+    font-size:21px;
+
+    color:#111;
 }
+
+.small{
+
+    font-size:17px;
+
+    margin-top:25px;
+
+    color:#333;
+}
+
+/* Мобильная версия */
+
 @media(max-width:700px){
 
 .title{
-    font-size:36px;
+    font-size:56px;
 }
 
 .section{
+    font-size:19px;
+}
+
+.footer{
     font-size:18px;
 }
 
 .card{
-    padding:35px 20px;
+    padding:40px 22px;
 }
 
 }
@@ -112,58 +204,87 @@ body{
 
 <body>
 
+<!-- ЗВЕЗДЫ -->
+
+<div class="stars">
+
+<div class="star" style="top:5%; left:8%;">✦</div>
+<div class="star" style="top:15%; left:80%;">✧</div>
+<div class="star" style="top:30%; left:15%;">✦</div>
+<div class="star" style="top:60%; left:88%;">✧</div>
+<div class="star" style="top:82%; left:12%;">✦</div>
+<div class="star" style="top:72%; left:75%;">✧</div>
+<div class="star" style="top:45%; left:92%;">✦</div>
+<div class="star" style="top:20%; left:50%;">✧</div>
+
+</div>
+
+<!-- КАРТОЧКА -->
+
 <div class="card">
 
-    <div class="title">
-       GATSBY PARTY
-    </div>
+<div class="decor">
+✨ 🥂 🪶 🎇 ✨
+</div>
 
-    <div class="subtitle">
-        Я ВАС ПРИГЛАШАЮ НА МОЙ ДЕНЬ РОЖДЕНИЯ!
-    </div>
+<div class="title">
+Gatsby Party
+</div>
 
-    <div class="line"></div>
+<div class="subtitle">
+Я ВАС ПРИГЛАШАЮ НА МОЙ ДЕНЬ РОЖДЕНИЯ
+</div>
 
-    <div class="section">
-        <span class="gold">5 июля • 15:00</span>
-    </div>
+<div class="line"></div>
 
-    <div class="section">
-        г. Великие Луки
-    </div>
+<div class="section">
+<span class="gold">5 июля • 15:00</span>
+</div>
 
-    <div class="section">
-        Кафе-бистро «Клюква»<br>
-        банкетный зал<br>
-        пр. Октябрьский 74/2
-    </div>
+<div class="section">
+г. Великие Луки
+</div>
 
-    <div class="line"></div>
+<div class="section">
+Кафе-бистро «Клюква»<br>
+банкетный зал<br>
+пр. Октябрьский 74/2
+</div>
 
-    <div class="section">
-        Вечеринка в стиле <span class="gold">Гэтсби</span><br>
-        ДРЕСС-КОД ОБЯЗАТЕЛЕН
-    </div>
+<div class="line"></div>
 
-    <div class="section">
-        Букеты запрещены
-    </div>
+<div class="section">
+Вечеринка в стиле<br>
+<span class="gold">«Великий Гэтсби»</span>
+</div>
 
-    <div class="section">
-        От каждого приглашённого —<br>
-        одна крупная роза любого цвета<br>
-        для составления букета мечты
-    </div>
+<div class="section">
+ДРЕСС-КОД ОБЯЗАТЕЛЕН!
+</div>
 
-    <div class="line"></div>
+<div class="section">
+Букеты запрещены
+</div>
 
-    <div class="footer">
-        И ещё одна просьба:<br><br>
+<div class="section">
+От каждого приглашённого —<br>
+одна крупная роза любого цвета<br>
+для составления букета мечты 🌹
+</div>
 
-        придумайте песню,<br>
-        с которой у вас ассоциируюсь я,<br>
-        чтобы создать мой личный плейлист ✨
-    </div>
+<div class="line"></div>
+
+<div class="footer">
+И ещё одна просьба ✨<br><br>
+
+Придумайте песню,<br>
+с которой у вас ассоциируюсь я,<br>
+чтобы создать мой личный плейлист 🥂
+</div>
+
+<div class="small">
+✨ 🪶 🎇 🥂 ✨
+</div>
 
 </div>
 
