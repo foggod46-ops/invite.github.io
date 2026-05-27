@@ -26,205 +26,72 @@ body{
 
     justify-content:center;
 
-    align-items:flex-start;
+    align-items:center;
 
-    overflow-x:hidden;
+    padding:20px;
 
     overflow-y:auto;
 
-    padding:40px 20px;
-
     font-family:'Great Vibes', cursive;
 
-    background:
-    linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.2)),
-    url("background.png");
+    background:#d4af37;
+}
+
+/* ОСНОВНАЯ КАРТИНКА */
+
+.invite{
+
+    width:100%;
+
+    max-width:850px;
+
+    min-height:1400px;
+
+    background:url("background.png");
 
     background-size:cover;
 
     background-position:center;
 
-    background-attachment:fixed;
-
-    position:relative;
-}
-
-/* ПЕРЕЛИВАНИЕ ФОНА */
-
-@keyframes bgFlow{
-
-0%{
-    background-position:0% 50%;
-}
-
-50%{
-    background-position:100% 50%;
-}
-
-100%{
-    background-position:0% 50%;
-}
-
-}
-
-/* ЗВЕЗДЫ */
-
-.stars{
-
-    position:fixed;
-
-    width:100%;
-
-    height:100%;
-
-    top:0;
-    left:0;
-
-    pointer-events:none;
-
-    z-index:0;
-}
-
-.star{
-
-    position:absolute;
-
-    color:#fff9dc;
-
-    animation:blink 2s infinite alternate;
-}
-
-@keyframes blink{
-
-from{
-    opacity:0.3;
-    transform:scale(0.8);
-}
-
-to{
-    opacity:1;
-    transform:scale(1.5);
-}
-
-}
-
-/* КАРТОЧКА */
-
-.card{
+    background-repeat:no-repeat;
 
     position:relative;
 
-    z-index:2;
+    padding:
 
-    width:100%;
+    230px 80px
+    160px 80px;
 
-    max-width:760px;
+}
 
-    background:rgba(255,248,220,0.92);
+/* ТЕКСТ */
 
-    border:4px solid #111;
-
-    border-radius:40px;
-
-    padding:50px 30px;
+.content{
 
     text-align:center;
 
-    box-shadow:
-    0 0 60px rgba(255,215,0,0.45);
+    color:#111;
 
-    overflow:hidden;
+    text-shadow:
+    0 0 10px rgba(255,255,255,0.35);
 }
-
-/* ЖЕМЧУГ */
-
-.card::before{
-
-    content:"❦ ༳ ✧ ⟡ ❦ ༳ ✧ ⟡ ❦ ༳ ✧ ⟡ ❦";
-
-    position:absolute;
-
-    top:10px;
-
-    left:20px;
-
-    right:20px;
-
-    font-size:24px;
-
-    color:#d4af37;
-
-    letter-spacing:10px;
-}
-
-.card::after{
-
-    content:"❦ ༳ ✧ ⟡ ❦ ༳ ✧ ⟡ ❦ ༳ ✧ ⟡ ❦";
-
-    position:absolute;
-
-    bottom:10px;
-
-    left:20px;
-
-    right:20px;
-
-    font-size:24px;
-
-    color:#d4af37;
-
-    letter-spacing:10px;
-}
-
-/* TITLE */
 
 .title{
 
-    font-size:70px;
-
-    color:#111;
-
-    margin-top:25px;
-
-    margin-bottom:20px;
+    font-size:72px;
 
     line-height:1.2;
 
-    text-shadow:
-    0 0 18px rgba(255,215,0,0.6);
-}
-
-.subtitle{
-
-    font-size:38px;
-
-    line-height:1.4;
-
-    color:#222;
-
-    margin-bottom:35px;
-}
-
-.line{
-
-    width:180px;
-
-    height:2px;
-
-    background:#111;
-
-    margin:28px auto;
+    margin-bottom:60px;
 }
 
 .section{
 
-    font-size:36px;
+    font-size:42px;
 
-    line-height:1.7;
+    line-height:1.6;
 
-    color:#111;
-
-    margin-bottom:26px;
+    margin-bottom:40px;
 }
 
 .gold{
@@ -236,20 +103,23 @@ to{
 
 @media(max-width:700px){
 
-.title{
-    font-size:48px;
+.invite{
+
+    min-height:1100px;
+
+    padding:
+    170px 30px
+    120px 30px;
 }
 
-.subtitle{
-    font-size:28px;
+.title{
+
+    font-size:46px;
 }
 
 .section{
-    font-size:26px;
-}
 
-.card{
-    padding:40px 20px;
+    font-size:28px;
 }
 
 }
@@ -259,45 +129,14 @@ to{
 
 <body>
 
-<!-- STARS -->
+<div class="invite">
 
-<div class="stars">
-
-<div class="star" style="top:2%; left:4%; font-size:18px;">✦</div>
-<div class="star" style="top:5%; left:20%; font-size:12px;">✧</div>
-<div class="star" style="top:8%; left:35%; font-size:22px;">✦</div>
-<div class="star" style="top:10%; left:70%; font-size:16px;">✧</div>
-<div class="star" style="top:14%; left:90%; font-size:18px;">✦</div>
-
-<div class="star" style="top:22%; left:10%; font-size:16px;">✧</div>
-<div class="star" style="top:26%; left:45%; font-size:20px;">✦</div>
-<div class="star" style="top:32%; left:78%; font-size:14px;">✧</div>
-
-<div class="star" style="top:40%; left:5%; font-size:18px;">✦</div>
-<div class="star" style="top:44%; left:28%; font-size:14px;">✧</div>
-<div class="star" style="top:48%; left:60%; font-size:18px;">✦</div>
-<div class="star" style="top:52%; left:92%; font-size:12px;">✧</div>
-
-<div class="star" style="top:64%; left:8%; font-size:18px;">✦</div>
-<div class="star" style="top:70%; left:40%; font-size:14px;">✧</div>
-<div class="star" style="top:76%; left:74%; font-size:20px;">✦</div>
-
-<div class="star" style="top:84%; left:14%; font-size:16px;">✧</div>
-<div class="star" style="top:90%; left:56%; font-size:18px;">✦</div>
-<div class="star" style="top:94%; left:88%; font-size:12px;">✧</div>
-
-</div>
-
-<!-- CARD -->
-
-<div class="card">
+<div class="content">
 
 <div class="title">
 Я ПРИГЛАШАЮ ВАС<br>
 НА МОЙ ДЕНЬ РОЖДЕНИЯ
 </div>
-
-<div class="line"></div>
 
 <div class="section">
 <span class="gold">5 ИЮЛЯ • 15:00</span>
@@ -312,8 +151,6 @@ to{
 БАНКЕТНЫЙ ЗАЛ<br>
 ПР. ОКТЯБРЬСКИЙ 74/2
 </div>
-
-<div class="line"></div>
 
 <div class="section">
 ВЕЧЕРИНКА В СТИЛЕ<br>
@@ -334,14 +171,12 @@ to{
 ДЛЯ СОСТАВЛЕНИЯ БУКЕТА МЕЧТЫ
 </div>
 
-<div class="line"></div>
-
 <div class="section">
 ПРИДУМАЙТЕ ПЕСНЮ,<br>
-С КОТОРОЙ У ВАС<br>
-АССОЦИИРУЮСЬ Я,<br>
-ДЛЯ СОЗДАНИЯ МОЕГО<br>
-ЛИЧНОГО ПЛЕЙЛИСТА ✨
+С КОТОРОЙ У ВАС АССОЦИИРУЮСЬ Я,<br>
+ДЛЯ СОЗДАНИЯ МОЕГО ЛИЧНОГО ПЛЕЙЛИСТА ✨
+</div>
+
 </div>
 
 </div>
