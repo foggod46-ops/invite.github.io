@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gatsby Party</title>
+<title>ПРИГЛАШЕНИЕ</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
 
@@ -34,21 +34,22 @@ body{
 
     padding:40px 20px;
 
-    font-family:'Cinzel', serif;
-
-    animation:bgFlow 10s ease infinite;
+    font-family:'Great Vibes', cursive;
 
     background:
-linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.2)),
-url("background.png");
+    linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.2)),
+    url("background.png");
 
-background-size:cover;
+    background-size:cover;
 
-background-position:center;
+    background-position:center;
 
-background-attachment:fixed;
+    background-attachment:fixed;
 
-/* ПЕРЕЛИВАЮЩИЙСЯ ФОН */
+    position:relative;
+}
+
+/* ПЕРЕЛИВАНИЕ ФОНА */
 
 @keyframes bgFlow{
 
@@ -70,11 +71,16 @@ background-attachment:fixed;
 
 .stars{
 
-    position:absolute;
+    position:fixed;
+
     width:100%;
+
     height:100%;
+
     top:0;
     left:0;
+
+    pointer-events:none;
 
     z-index:0;
 }
@@ -83,21 +89,21 @@ background-attachment:fixed;
 
     position:absolute;
 
-    color:#fff8dc;
+    color:#fff9dc;
 
-    animation:blink 2.5s infinite alternate;
+    animation:blink 2s infinite alternate;
 }
 
 @keyframes blink{
 
 from{
-    opacity:0.2;
+    opacity:0.3;
     transform:scale(0.8);
 }
 
 to{
     opacity:1;
-    transform:scale(1.4);
+    transform:scale(1.5);
 }
 
 }
@@ -107,125 +113,123 @@ to{
 .card{
 
     position:relative;
+
     z-index:2;
 
     width:100%;
+
     max-width:760px;
 
-    background:rgba(255,248,220,0.90);
+    background:rgba(255,248,220,0.92);
 
     border:4px solid #111;
 
-    border-radius:35px;
+    border-radius:40px;
 
-    padding:40px 28px;
+    padding:50px 30px;
 
     text-align:center;
 
     box-shadow:
     0 0 60px rgba(255,215,0,0.45);
 
-    backdrop-filter:blur(10px);
+    overflow:hidden;
 }
 
-/* ДЕКОР */
+/* ЖЕМЧУГ */
 
-.decor{
+.card::before{
 
-    font-size:42px;
+    content:"❦ ༳ ✧ ⟡ ❦ ༳ ✧ ⟡ ❦ ༳ ✧ ⟡ ❦";
 
-    margin-bottom:18px;
+    position:absolute;
 
-    animation:float 4s ease-in-out infinite;
+    top:10px;
+
+    left:20px;
+
+    right:20px;
+
+    font-size:24px;
+
+    color:#d4af37;
+
+    letter-spacing:10px;
 }
 
-@keyframes float{
+.card::after{
 
-0%{
-    transform:translateY(0px);
-}
+    content:"❦ ༳ ✧ ⟡ ❦ ༳ ✧ ⟡ ❦ ༳ ✧ ⟡ ❦";
 
-50%{
-    transform:translateY(-6px);
-}
+    position:absolute;
 
-100%{
-    transform:translateY(0px);
-}
+    bottom:10px;
 
+    left:20px;
+
+    right:20px;
+
+    font-size:24px;
+
+    color:#d4af37;
+
+    letter-spacing:10px;
 }
 
 /* TITLE */
 
 .title{
 
-    font-family:'Great Vibes', cursive;
-
-    font-size:62px;
+    font-size:70px;
 
     color:#111;
 
-    margin-bottom:15px;
+    margin-top:25px;
+
+    margin-bottom:20px;
+
+    line-height:1.2;
 
     text-shadow:
-    0 0 15px rgba(212,175,55,0.6);
+    0 0 18px rgba(255,215,0,0.6);
 }
 
 .subtitle{
 
-    letter-spacing:5px;
+    font-size:38px;
 
-    font-size:18px;
+    line-height:1.4;
 
-    color:#333;
+    color:#222;
 
     margin-bottom:35px;
 }
 
 .line{
 
-    width:170px;
+    width:180px;
+
     height:2px;
 
     background:#111;
 
-    margin:30px auto;
+    margin:28px auto;
 }
 
 .section{
 
-    font-size:20px;
+    font-size:36px;
 
-    line-height:1.9;
+    line-height:1.7;
 
     color:#111;
 
-    margin-bottom:24px;
+    margin-bottom:26px;
 }
 
 .gold{
 
     color:#8b6508;
-
-    font-weight:700;
-}
-
-.footer{
-
-    margin-top:35px;
-
-    font-size:18px;
-
-    line-height:1.9;
-
-    color:#111;
-}
-
-.small{
-
-    margin-top:28px;
-
-    font-size:20px;
 }
 
 /* MOBILE */
@@ -233,19 +237,19 @@ to{
 @media(max-width:700px){
 
 .title{
-    font-size:58px;
+    font-size:48px;
+}
+
+.subtitle{
+    font-size:28px;
 }
 
 .section{
-    font-size:19px;
-}
-
-.footer{
-    font-size:18px;
+    font-size:26px;
 }
 
 .card{
-    padding:42px 22px;
+    padding:40px 20px;
 }
 
 }
@@ -259,30 +263,28 @@ to{
 
 <div class="stars">
 
-<div class="star" style="top:4%; left:6%; font-size:18px;">✨</div>
-<div class="star" style="top:8%; left:18%; font-size:12px;">⭐️</div>
-<div class="star" style="top:14%; left:78%; font-size:20px;">✨</div>
-<div class="star" style="top:10%; left:92%; font-size:14px;">⭐️</div>
+<div class="star" style="top:2%; left:4%; font-size:18px;">✦</div>
+<div class="star" style="top:5%; left:20%; font-size:12px;">✧</div>
+<div class="star" style="top:8%; left:35%; font-size:22px;">✦</div>
+<div class="star" style="top:10%; left:70%; font-size:16px;">✧</div>
+<div class="star" style="top:14%; left:90%; font-size:18px;">✦</div>
 
-<div class="star" style="top:22%; left:10%; font-size:16px;">✨</div>
-<div class="star" style="top:28%; left:26%; font-size:11px;">⭐️</div>
-<div class="star" style="top:18%; left:58%; font-size:17px;">✨</div>
-<div class="star" style="top:35%; left:88%; font-size:13px;">⭐️</div>
+<div class="star" style="top:22%; left:10%; font-size:16px;">✧</div>
+<div class="star" style="top:26%; left:45%; font-size:20px;">✦</div>
+<div class="star" style="top:32%; left:78%; font-size:14px;">✧</div>
 
-<div class="star" style="top:44%; left:5%; font-size:18px;">✨</div>
-<div class="star" style="top:40%; left:20%; font-size:14px;">⭐️</div>
-<div class="star" style="top:48%; left:75%; font-size:16px;">✨</div>
-<div class="star" style="top:38%; left:94%; font-size:12px;">⭐️</div>
+<div class="star" style="top:40%; left:5%; font-size:18px;">✦</div>
+<div class="star" style="top:44%; left:28%; font-size:14px;">✧</div>
+<div class="star" style="top:48%; left:60%; font-size:18px;">✦</div>
+<div class="star" style="top:52%; left:92%; font-size:12px;">✧</div>
 
-<div class="star" style="top:62%; left:12%; font-size:18px;">✨</div>
-<div class="star" style="top:58%; left:32%; font-size:11px;">⭐️</div>
-<div class="star" style="top:68%; left:70%; font-size:19px;">✨</div>
-<div class="star" style="top:74%; left:90%; font-size:12px;">⭐️</div>
+<div class="star" style="top:64%; left:8%; font-size:18px;">✦</div>
+<div class="star" style="top:70%; left:40%; font-size:14px;">✧</div>
+<div class="star" style="top:76%; left:74%; font-size:20px;">✦</div>
 
-<div class="star" style="top:82%; left:8%; font-size:17px;">✨</div>
-<div class="star" style="top:88%; left:26%; font-size:13px;">⭐️</div>
-<div class="star" style="top:92%; left:66%; font-size:18px;">✨</div>
-<div class="star" style="top:84%; left:84%; font-size:12px;">⭐️</div>
+<div class="star" style="top:84%; left:14%; font-size:16px;">✧</div>
+<div class="star" style="top:90%; left:56%; font-size:18px;">✦</div>
+<div class="star" style="top:94%; left:88%; font-size:12px;">✧</div>
 
 </div>
 
@@ -290,39 +292,32 @@ to{
 
 <div class="card">
 
-<div class="decor">
-🥂 ✨ 🪶 🎆 💎
-</div>
-
 <div class="title">
-Gatsby Party
-</div>
-
-<div class="subtitle">
-ВЫ ПРИГЛАШЕНЫ НА МОЕ ДЕНЬ РОЖДЕНИЕ
+Я ПРИГЛАШАЮ ВАС<br>
+НА МОЙ ДЕНЬ РОЖДЕНИЯ
 </div>
 
 <div class="line"></div>
 
 <div class="section">
-<span class="gold">5 июля • 15:00</span>
+<span class="gold">5 ИЮЛЯ • 15:00</span>
 </div>
 
 <div class="section">
-г. Великие Луки
+г. ВЕЛИКИЕ ЛУКИ
 </div>
 
 <div class="section">
-Кафе-бистро «Клюква»<br>
-банкетный зал<br>
-пр. Октябрьский 74/2
+КАФЕ-БИСТРО «КЛЮКВА»<br>
+БАНКЕТНЫЙ ЗАЛ<br>
+ПР. ОКТЯБРЬСКИЙ 74/2
 </div>
 
 <div class="line"></div>
 
 <div class="section">
-Вечеринка в стиле<br>
-<span class="gold">«Гэтсби»</span>
+ВЕЧЕРИНКА В СТИЛЕ<br>
+<span class="gold">«ВЕЛИКИЙ ГЭТСБИ»</span>
 </div>
 
 <div class="section">
@@ -330,27 +325,23 @@ Gatsby Party
 </div>
 
 <div class="section">
-💐 Букеты запрещены
+БУКЕТЫ ЗАПРЕЩЕНЫ
 </div>
 
 <div class="section">
-🌹 От каждого приглашённого —<br>
-одна крупная роза любого цвета<br>
-для составления букета мечты
+ОТ КАЖДОГО ПРИГЛАШЁННОГО —<br>
+ОДНА КРУПНАЯ РОЗА ЛЮБОГО ЦВЕТА<br>
+ДЛЯ СОСТАВЛЕНИЯ БУКЕТА МЕЧТЫ
 </div>
 
 <div class="line"></div>
 
-<div class="footer">
-🎶 И ещё одна просьба ✨<br><br>
-
-Придумайте песню,<br>
-с которой у вас ассоциируюсь я,<br>
-чтобы создать мой личный плейлист 🥂
-</div>
-
-<div class="small">
-✨ 🥂 💎 🪶 🎆 ✨
+<div class="section">
+ПРИДУМАЙТЕ ПЕСНЮ,<br>
+С КОТОРОЙ У ВАС<br>
+АССОЦИИРУЮСЬ Я,<br>
+ДЛЯ СОЗДАНИЯ МОЕГО<br>
+ЛИЧНОГО ПЛЕЙЛИСТА ✨
 </div>
 
 </div>
