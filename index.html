@@ -14,24 +14,23 @@
     box-sizing:border-box;
 }
 
-html,
-body{
-
+html, body{
     width:100%;
-    min-height:100vh;
-
+    height:100%;
     background:#000;
-
-    overflow-y:auto;
-
-    overflow-x:hidden;
+    overflow:hidden;
+    font-family:Arial, sans-serif;
 }
 
-/* BODY */
+/* ЭКРАН ВХОДА */
 
-body{
+#startScreen{
 
-    min-height:100vh;
+    position:fixed;
+
+    inset:0;
+
+    background:#000;
 
     display:flex;
 
@@ -39,35 +38,54 @@ body{
 
     align-items:center;
 
-    background:#000;
-
-    overflow-y:auto;
-
-    overflow-x:hidden;
+    z-index:100;
 }
-/* КАРТИНКА */
+
+#enterBtn{
+
+    padding:20px 50px;
+
+    font-size:32px;
+
+    background:#111;
+
+    color:white;
+
+    border:2px solid gold;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+#enterBtn:hover{
+
+    background:gold;
+
+    color:black;
+}
+
+/* САЙТ */
+
+#site{
+
+    display:none;
+
+    width:100%;
+    height:100%;
+    overflow:auto;
+}
 
 .invite{
 
     width:100%;
-
     max-width:700px;
-
-    height:auto;
 
     display:block;
 
     margin:auto;
-}
-/* PHONE */
-
-@media(max-width:700px){
-
-.invite{
-
-    width:100vw;
-
-    max-width:none;
 }
 
 .gif{
@@ -84,10 +102,8 @@ body{
 
     pointer-events:none;
 
-    border-radius:20px; /* закругление */
+    border-radius:20px;
 }
-
-/* PHONE */
 
 @media(max-width:700px){
 
@@ -103,26 +119,42 @@ body{
 }
 </style>
 </head>
+
 <body>
 
-<img src="invite_bd.png" class="invite">
-<img src="sparkles.gif" class="gif">
+<!-- ЗАСТАВКА -->
+
+<div id="startScreen">
+    <button id="enterBtn">НАЖАТЬ</button>
+</div>
+
+<!-- САЙТ -->
+
+<div id="site">
+    <img src="invite_bd.png" class="invite">
+    <img src="sparkles.gif" class="gif">
+</div>
+
+<!-- МУЗЫКА -->
 
 <audio id="bgMusic" loop>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
 <script>
+
+const btn = document.getElementById('enterBtn');
 const music = document.getElementById('bgMusic');
 
-function startMusic() {
-    music.play();
-    document.removeEventListener('click', startMusic);
-    document.removeEventListener('touchstart', startMusic);
-}
+btn.addEventListener('click', () => {
 
-document.addEventListener('click', startMusic);
-document.addEventListener('touchstart', startMusic);
+    document.getElementById('startScreen').style.display = 'none';
+
+    document.getElementById('site').style.display = 'block';
+
+    music.play();
+});
+
 </script>
 
 </body>
