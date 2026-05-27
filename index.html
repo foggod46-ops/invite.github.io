@@ -6,10 +6,6 @@
 
 <title>Gatsby Party</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
 <style>
 
 *{
@@ -19,6 +15,8 @@
 }
 
 body{
+
+    background:#d4af37;
 
     min-height:100vh;
 
@@ -31,137 +29,34 @@ body{
     padding:20px;
 
     overflow-y:auto;
-
-    background:#d4af37;
-
-    font-family:'Great Vibes', cursive;
 }
 
-/* ОСНОВНОЙ БЛОК */
+/* КАРТИНКА ПРИГЛАШЕНИЯ */
 
 .invite{
-
-    position:relative;
 
     width:100%;
 
     max-width:850px;
-}
-
-/* КАРТИНКА */
-
-.bg{
-
-    width:100%;
 
     display:block;
 
     border-radius:20px;
-}
 
-/* ТЕКСТ ПОВЕРХ КАРТИНКИ */
-
-.content{
-
-    position:absolute;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    padding:
-    140px 70px
-    120px 70px;
-
-    text-align:center;
-
-    color:#111;
-
-    text-shadow:
-    0 0 10px rgba(255,255,255,0.35);
-}
-
-/* GATSBY PARTY */
-
-.main-title{
-
-    font-size:92px;
-
-    line-height:1;
-
-    margin-bottom:35px;
-
-    color:#000;
-
-    text-shadow:
-    0 0 18px rgba(255,215,0,0.7);
-}
-
-/* ЗАГОЛОВОК */
-
-.title{
-
-    font-size:42px;
-
-    line-height:1.35;
-
-    margin-bottom:55px;
-
-    color:#000;
-}
-
-.section{
-
-    font-size:28px;
-
-    line-height:1.6;
-
-    margin-bottom:38px;
-
-    color:#000;
-}
-
-/* ТЁМНО-ЗОЛОТОЙ */
-
-.gold{
-
-    color:#6e4f00;
+    box-shadow:
+    0 0 40px rgba(0,0,0,0.25);
 }
 
 /* MOBILE */
 
 @media(max-width:700px){
 
-.content{
-
-    padding:
-    85px 28px
-    60px 28px;
+body{
+    padding:10px;
 }
 
-.main-title{
-
-    font-size:54px;
-
-    margin-bottom:18px;
-}
-
-.title{
-
-    font-size:34px;
-
-    margin-bottom:28px;
-}
-
-.section{
-
-    font-size:22px;
-
-    line-height:1.45;
-
-    margin-bottom:22px;
+.invite{
+    border-radius:14px;
 }
 
 }
@@ -171,67 +66,7 @@ body{
 
 <body>
 
-<div class="invite">
-
-<!-- ТВОЯ КАРТИНКА -->
-
-<img src="background.png" class="bg">
-
-<!-- ТЕКСТ -->
-
-<div class="content">
-
-<div class="main-title">
-Gatsby Party
-</div>
-
-<div class="title">
-Я ПРИГЛАШАЮ ВАС<br>
-НА МОЙ ДЕНЬ РОЖДЕНИЯ
-</div>
-
-<div class="section">
-<span class="gold">5 ИЮЛЯ • 15:00</span>
-</div>
-
-<div class="section">
-г. ВЕЛИКИЕ ЛУКИ
-</div>
-
-<div class="section">
-КАФЕ-БИСТРО «КЛЮКВА»<br>
-БАНКЕТНЫЙ ЗАЛ<br>
-ПР. ОКТЯБРЬСКИЙ 74/2
-</div>
-
-<div class="section">
-ВЕЧЕРИНКА В СТИЛЕ<br>
-<span class="gold">«ВЕЛИКИЙ ГЭТСБИ»</span>
-</div>
-
-<div class="section">
-ДРЕСС-КОД ОБЯЗАТЕЛЕН ✨
-</div>
-
-<div class="section">
-БУКЕТЫ ЗАПРЕЩЕНЫ
-</div>
-
-<div class="section">
-ОТ КАЖДОГО ПРИГЛАШЁННОГО —<br>
-ОДНА КРУПНАЯ РОЗА ЛЮБОГО ЦВЕТА<br>
-ДЛЯ СОСТАВЛЕНИЯ БУКЕТА МЕЧТЫ
-</div>
-
-<div class="section">
-ПРИДУМАЙТЕ ПЕСНЮ,<br>
-С КОТОРОЙ У ВАС АССОЦИИРУЮСЬ Я,<br>
-ДЛЯ СОЗДАНИЯ МОЕГО ЛИЧНОГО ПЛЕЙЛИСТА ✨
-</div>
-
-</div>
-
-</div>
+<img src="invite.png" class="invite">
 
 </body>
 </html>
