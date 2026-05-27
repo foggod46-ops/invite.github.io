@@ -3,48 +3,167 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>День Рождения</title>
+
+<title>GATSBY PARTY</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-body{
+
+*{
     margin:0;
-    height:100vh;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    background:black;
-    color:white;
-    font-family:Arial;
-    text-align:center;
+    background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url("background.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    color:#f5d37a;
+    font-family:'Cinzel', serif;
+    padding:20px;
 }
 
 .card{
-    padding:40px;
-    border:1px solid white;
+    width:100%;
+    max-width:700px;
+
+    border:2px solid #d4af37;
+    padding:50px 35px;
+
+    background:rgba(0,0,0,0.65);
+
+    backdrop-filter:blur(8px);
+
     border-radius:20px;
-    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 0 25px rgba(212,175,55,0.4);
+
+    text-align:center;
 }
 
-h1{
-    font-size:48px;
+.title{
+    font-size:52px;
+    letter-spacing:5px;
+    margin-bottom:10px;
 }
 
-p{
+.subtitle{
     font-size:20px;
+    margin-bottom:40px;
+    color:#fff0b3;
 }
-</style>
 
+.section{
+    margin-bottom:28px;
+    line-height:1.8;
+    font-size:22px;
+}
+
+.gold{
+    color:#d4af37;
+    font-weight:600;
+}
+
+.line{
+    width:120px;
+    height:2px;
+    background:#d4af37;
+    margin:30px auto;
+}
+
+.footer{
+    margin-top:35px;
+    font-size:18px;
+    color:#fff0b3;
+    line-height:1.7;
+}
+
+@media(max-width:700px){
+
+.title{
+    font-size:36px;
+}
+
+.section{
+    font-size:18px;
+}
+
+.card{
+    padding:35px 20px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
 <div class="card">
-    <h1>VASILENOK BDAY</h1>
 
-    <p>7 ИЮНЯ / 22:00</p>
+    <div class="title">
+        GATSBY PARTY
+    </div>
 
-    <p>WARSAW</p>
+    <div class="subtitle">
+        YOU ARE INVITED
+    </div>
 
-    <p>BE THERE.</p>
+    <div class="line"></div>
+
+    <div class="section">
+        <span class="gold">5 июля • 15:00</span>
+    </div>
+
+    <div class="section">
+        г. Великие Луки
+    </div>
+
+    <div class="section">
+        Кафе-бистро «Клюква»<br>
+        банкетный зал<br>
+        пр. Октябрьский 74/2
+    </div>
+
+    <div class="line"></div>
+
+    <div class="section">
+        Вечеринка в стиле <span class="gold">Гэтсби</span><br>
+        Dress Code Required
+    </div>
+
+    <div class="section">
+        Букеты запрещены
+    </div>
+
+    <div class="section">
+        От каждого приглашённого —<br>
+        одна крупная роза любого цвета<br>
+        для составления букета мечты
+    </div>
+
+    <div class="line"></div>
+
+    <div class="footer">
+        И ещё одна просьба:<br><br>
+
+        придумайте песню,<br>
+        с которой у вас ассоциируюсь я,<br>
+        чтобы создать мой личный плейлист ✨
+    </div>
+
 </div>
 
 </body>
