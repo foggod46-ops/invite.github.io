@@ -88,6 +88,10 @@ body{
     width:100%;
 
     min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
 }
 .invite{
 
@@ -95,9 +99,9 @@ body{
 
     max-width:700px;
 
-    display:block;
+    height:auto;
 
-    margin:auto;
+    display:block;
 }
 .gif{
 
@@ -161,7 +165,7 @@ btn.addEventListener('click', () => {
 
     document.getElementById('startScreen').style.display = 'none';
 
-    document.getElementById('site').style.display = 'block';
+    document.getElementById('site').style.display = 'flex';
 
     music.play();
 });
